@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Productos - Barberia Alura</title>
+        <link rel="stylesheet" href="reset.css">    <!--resetea fileoriginal y arranca desde cero-->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- prueba para manejo DOM-->
+        <link rel="icon" type="image/png" href="./images/rocket.svg" /><!-- icon en la pestañade navegacion-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Open+Sans&family=Parisienne&display=swap" rel="stylesheet"/>
+
+
+    </head>
+
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img src="C:\Users\Usuario\Desktop\MI PRIMERA PAGINA-ALURA/images/logo.png"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="productos.html">PRODUCTOS</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <ul class="productos">
+                <li>
+                    <h2>Cabello</h2>
+                    <img src="C:\Users\Usuario\Desktop\MI PRIMERA PAGINA-ALURA/images/cabello.jpg">
+                    <p class="producto-descripcion">Con tijera o maquina, a gusto del cliente</p>
+                    <p class="producto-precio">$ 10.00</p>
+                    <p></p>
+                </li>
+                <li>
+                    <h2>Barba</h2>
+                    <img src="C:\Users\Usuario\Desktop\MI PRIMERA PAGINA-ALURA/images/barba.jpg">
+                    <p class="producto-descripcion">Corte y diseño profesional de barba</p>
+                    <p class="producto-precio">$ 08.00</p>
+                </li>
+                <li>
+                    <h2>Cabello + Barba</h2>
+                    <img src="C:\Users\Usuario\Desktop\MI PRIMERA PAGINA-ALURA/images/cabello+barba.jpg">
+                    <p class="producto-descripcion">Paquete completo de cabello y barba</p>
+                    <p class="producto-precio">$ 15.00</p>
+                </li>
+            </ul>
+
+        </main>
+        <!-- pruebas escuchando eventos-->
+
+    <div>
+        <form action="">
+          <input type="text" placeholder="Nombre de la tarea" class="inputForm" data-form-input/>
+          <button type="submit" class="btnCreate" data-form-btn><!--data-form-btn es otra forma para acceder a la etiqueta o clase lo que vaya despues del data es una descripcion-->
+            Agregar <i class="fas fa-plus-circle"></i>
+          </button>
+        </form>
+      </div>
+        <ul class="cardsList" data-list>
+            
+        </ul>
+
+
+
+        <footer>
+            <img src="C:\Users\Usuario\Desktop\MI PRIMERA PAGINA-ALURA/images/logo-blanco.png" alt="">
+            <p class="copyright">&Copy Copyright Barbería Alura - 2022</p>
+        </footer>
+
+
+        <script>
+            (   () => {
+
+            const btn = document.querySelector("[data-form-btn]");
+
+            const createTaks = (evento) => {
+                evento.preventDefault();
+                const input = document.querySelector("[data-form-input]");
+                const value = input.value;
+                const list = document.querySelector("[data-list]");
+                const task = document.createElement("li");
+                task.classList.add("card");//inyecta de manera dinamica una card
+                input.value = "";
+
+                const taskContent = document.createElement("div");
+                taskContent.appendChild(checkComplete());
+                const titleTask = document.createElement("span");
+                titleTask.classList.add("task")
+                titleTask.innerText = value;
+                taskContent.appendChild(checkComplete());
+                taskContent.appendChild(titleTask);
+                taskContent.appendChild(deleteIcon());
+                //const content = `<i class="fas fa-trash-alt trashIcon icon"></i>`;
+
+                task.appendChild(taskContent);              
+                list.appendChild(task);//al elemento lista quiero agregarle un hijo
+
+            };
+
+            /*Arrow funtion*/
+
+            btn.addEventListener("click", createTaks);
+
+            const checkComplete = () => {
+                const i = document.createElement("i")
+                i.classList.add("far", "fa-check-square", "icon");
+                i.addEventListener("click", completeTask);
+                return i
+            };
+            // Immediately invoked function expression IIFE
+            const completeTask = (event) => {
+                const element = event.target;
+                element.classList.toggle("fas");
+                element.classList.toggle('completeIcon');
+                element.classList.toggle("far");
+
+            };
+
+            const deleteIcon = () => {
+            const i = document.createElement('i');
+            i.classList.add('fas', 'fa-trash-alt', 'trashIcon', 'icon');
+            i.addEventListener('click', deleteTask);
+            return i;
+            };
+
+            const deleteTask = (event) => {
+            const parent = event.target.parentElement;
+            parent.remove();
+            };
+
+        })();
+            
+        </script>
+
+        <style>
+            .completedIcon{
+            color: rgba(62,161,219,1);
+            }
+        </style>
+
+    </body>
+
+
+</html>

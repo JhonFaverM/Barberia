@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacto - Barberia Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <!-- mobile input types. AYUDA PARA DEFINIR LOS TIPOS DE INPUT-->
+
+
+    </head>
+
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img src="C:\Users\Usuario\Desktop\MI PRIMERA PAGINA-ALURA/images/logo.png" alt="Logo de la barberia"></h1><!-- alt son buenas practicas y para que no haya problema al cargar image dese un tel-->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="productos.html">PRODUCTOS</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <form>
+                <label for="nombreApellido">Nombre y Apellido</label>
+                <input type="text" id="nombreApellido" class="input-padron" required placeholder="Pepe perez">
+
+                <label for="correoElectronico">Correo Electronico</label>
+                <input type="email" id="correoElectronico" class="input-padron" required placeholder="pepe@gmail.com">
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" class="input-padron" required placeholder="312-1212-1212">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea cols="70" rows="10" required placeholder="un saludo"></textarea>
+
+                <fieldset>
+                    <legend>¿Como le gustaría que lo contactemos?</legend>
+
+                    <label for="radio-email"><input type="radio" name="contacto"
+                    value="email" id="radio-email">Email</label>
+                    
+
+                    <label for="radio-telefono"><input type="radio" name="contacto"
+                    value="telefono" id="radio-telefono">Telefono</label>
+                        
+                    <label for="radio-whatsapp"><input type="radio" name="contacto"
+                    value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+
+                </fieldset>
+
+                <fieldset>                    
+                    <legend>¿En que horario prefiere ser atendido?</legend>
+                    <select>
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                    <input type="date">
+                </fieldset>
+
+
+                <label for="" class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería Alura?</label>
+
+                <input type="submit" value="Enviar formulario" class="enviar">
+            </form>
+
+            <table>
+
+                <thead><!-- representa el encabezado de la tabla-->
+                    <tr><!--tr representa la fila de la tabla-->
+                        <td>Día</td><!--td representa la celda de la tabla.-->
+                        <td>Horario</td>
+                    </tr>
+                </thead>
+
+                <tbody><!--representa el cuerpo de la tabla-->
+                    <tr>
+                        <td>Lunes</td>
+                        <td>08h - 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Miercoles</td>
+                        <td>08h - 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>08h - 20h</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </main>
+
+        <footer>
+            <img src="C:\Users\Usuario\Desktop\MI PRIMERA PAGINA-ALURA/images/logo-blanco.png" alt="Logo de la barberia">
+            <p class="copyright">&copy; Copyright Barbería Alura - 2022</p>
+        </footer>
+
+</html>
