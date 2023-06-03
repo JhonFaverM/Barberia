@@ -6,67 +6,97 @@
         <title>Productos</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="productos.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <div class="caja">
-                <h1><img src="images/logo.png"></h1>
+                <h1><img src="images/bs.jpg"></h1>
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a class="active" href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Reservar</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-
-        <main>
+        <main class="total-background">
+            <section class="productos-barberia container">
+                <img class="banner" src="images/produ-hom.webp"><br>
+                <h2 class="productos__titulo">Sobre la Barber Shop</h2>
+                <div class="productos__contenido">
+                    <article class="nuestros-servicios">
+                    <h2 class="productos__titulo">Nuestro equipo</h2>
+                        <p>
+                            <a class="descripcion-producto-ser">
+                                Nuestro equipo de barberos altamente capacitados y con experiencia
+                                se encarga de brindar una atención personalizada a cada cliente,
+                                teniendo en cuenta sus preferencias y necesidades individuales.
+                                Utilizamos herramientas y productos profesionales de primera calidad
+                                para garantizar resultados excepcionales y satisfacción total.</a>
+                        </p>
+                    </article>
+                    <img src="images/team-bar.jpg" class="productos-equipo" controls></img><br>
+                </div>
+            </section>
             <ul class="productos">
+                <h2 class="productos__titulo">Nuestros Servicios</h2>
                 <li>
                     <h2>Cabello</h2>
-                    <img src="images/cabello.jpg">
+                    <div>
+                        <img class="img-card" src="images/cabello.avif">
+                    </div>
                     <p class="producto-descripcion">Con tijera o máquina, a gusto del cliente</p>
                     <p class="producto-precio">$ 10.00</p>
                 </li>
                 <li>
                     <h2>Barba</h2>
-                    <img src="images/barba.jpg">
+                    <div>
+                        <img class="img-card" src="images/barba+cab.avif">
+                    </div>
                     <p class="producto-descripcion">Corte y diseño profesional de barba</p>
-                    <p class="producto-precio">$ 08.00</p>
+                    <p class="producto-precio">$ 8.00</p>
                 </li>
                 <li>
-                    <h2>Cabello-Barba</h2>
-                    <img src="images/cabello+barba.jpg">
+                    <h2>Cabello + Barba</h2>
+                    <div>
+                        <img class="img-card" src="images/barba1.jpg">
+                    </div>
                     <p class="producto-descripcion">Paquete completo de cabello y barba</p>
                     <p class="producto-precio">$ 15.00</p>
                 </li>
                 <li>
-                    <h2>Cabello</h2>
-                    <img src="images/cabello.jpg">
-                    <p class="producto-descripcion">Con tijera o máquina, a gusto del cliente</p>
-                    <p class="producto-precio">$ 10.00</p>
-                </li>
-                <li>
-                    <h2>Barba</h2>
-                    <img src="images/barba.jpg">
-                    <p class="producto-descripcion">Corte y diseño profesional de barba</p>
-                    <p class="producto-precio">$ 08.00</p>
-                </li>
-                <li>
-                    <h2>Cabello-Barba</h2>
-                    <img src="images/cabello+barba.jpg">
-                    <p class="producto-descripcion">Paquete completo de cabello y barba</p>
-                    <p class="producto-precio">$ 15.00</p>
+                    <h2>Ceras</h2>
+                    <div>
+                        <img class="img-card" src="images/ventas.jpg">
+                    </div>
+                    <p class="producto-descripcion">Ceras e Hidratantes para cabello</p>
+                    <p class="producto-precio">$ Buen precio</p>
                 </li>
             </ul>
+            <section class="productos-barberia container">
+                <h2 class="productos__titulo">Sobre la Barber Shop</h2>
+                <div class="productos__contenido">
+                    <article class="nuestros-servicios">
+                        <p>
+                            <a class="descripcion-producto-ser"> 
+                                Nuestros servicios y productos en la barbería son de la más alta calidad.
+                                Ofrecemos una amplia gama de servicios de cuidado personal para hombres,
+                                incluyendo cortes de cabello modernos y clásicos, afeitados tradicionales con navaja,
+                                cuidado de barba y bigote, y tratamientos para el cuero cabelludo.</a>
+                        </p>
+                    </article>
+                    <img src="images/productos.png" class="productos-equipo" controls></img>
+                </div>
+            </section>
         </main>
 
         <footer>
-            <img src="images/logo-blanco.png" alt="logo barberia">
-            <p class="copyright">&copy Copyright Barbería Alura - 2023</p>
-            <p class="copyright">co author By Jhon Machado</p>
-        </footer>>        
+            <img class="logo-footer" src="images/logo-bar.jpg" alt="logo barberia">
+            <p class="copyright">&copy Copyright Barber Shop - 2023</p>
+            <p class="copyright">By Jhon Machado</p>
+        </footer>     
     </body>
 </html>

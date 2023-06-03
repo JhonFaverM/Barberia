@@ -1,0 +1,141 @@
+.banner{
+    width:70%;
+    height: 500px;
+}
+
+.active {
+    color: orange;
+}
+
+.total-background {
+    background: #BEB9AD;
+}
+
+.productos{
+    background: #BEB9AD;
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li{
+    background: linear-gradient(45deg, transparent, #252525, transparent);
+    display: inline-block;
+    text-align: center;
+    width: 40.5%;
+    vertical-align: top;
+    margin: 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 10px
+}
+
+.productos .img-card {
+    margin-top: 15px;
+    width: 100%;
+    height: 160px;
+}
+
+.productos li:hover{
+    border-color: #896B4B;
+}
+
+.productos li:active{
+    border-color: #088c19;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: #c77216;
+}
+
+.productos li:hover h2{
+    font-size: 20px;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+    color: white;
+    padding-top: 10px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 10px;
+    color: #c77216;
+}
+
+/* PRODUCTOS-BARBERIA*/
+
+.productos-barberia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.productos__titulo {
+    color: aliceblue;
+    font-weight: 800;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.nuestros-servicios {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-top: 2rem;
+}
+
+.descripcion-producto-ser {
+    display: block;
+    color: aliceblue;
+}
+
+.productos-equipo {
+    width: 100vw;
+}
+
+@media screen and (min-width: 768px){
+    .descripcion-producto-ser{
+        display: inline-block;
+    }
+    .productos-equipo{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .productos__contenido{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .descripcion-producto-ser{
+        display: block;
+    }
+    .productos-equipo{
+        align-self: flex-end;
+        width: 375px;
+    } 
+}
+
+.container{
+    padding-right: 6%;
+    padding-left: 6%;
+}
+
+@media screen and (min-width: 1024px) {
+    .container{
+        padding-left: calc((100% - 970px)/2);
+        padding-right: calc((100% - 940px)/2);
+    }  
+}
